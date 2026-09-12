@@ -38,3 +38,6 @@ jobs:
             ${{ env.IMAGE_NAME }}:2.11.4-cloudflare
             ${{ env.IMAGE_NAME }}:${{ github.sha }}
             ${{ env.IMAGE_NAME }}:latest
+          labels: |
+            org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
+            org.opencontainers.image.title=Caddy with Cloudflare DNS
